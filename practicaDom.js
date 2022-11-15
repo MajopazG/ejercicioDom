@@ -31,6 +31,20 @@ function calculate(event) {
   }
 }
 
+note_three.addEventListener("click", AnalysisOfTheResult);
+
+function calculationToApproximate(){
+   return (3.5-(note_one.value*0.3)-(note_two.value*0.3))/0.4; 
+}
+
+function AnalysisOfTheResult(){
+  if(calculationToApproximate() >= 5.1){
+    alert("Ya no se puede salvar la materia :c");
+  }else{
+    alert("Para pasar la materia, debe sacar una nota igual o mayor a "+calculationToApproximate()+" en la tercera nota");
+  }
+}
+
 note_three.addEventListener("keyup", casesOfTheNotas);
 
 function casesOfTheNotas(event){
